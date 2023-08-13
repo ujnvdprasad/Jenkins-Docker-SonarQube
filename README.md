@@ -73,9 +73,10 @@ http://:8080 [You can get the ec2-instance-public-ip-address from your AWS EC2 c
 Note: If you are not interested in allowing All Traffic to your EC2 instance 1. Delete the inbound traffic rule for your instance 2. Edit the inbound traffic rule to only allow custom TCP port 8080
 
 After you login to Jenkins, - Run the command to copy the Jenkins Admin Password - sudo cat /var/lib/jenkins/secrets/initialAdminPassword - Enter the Administrator password
-![Screenshot 2023-08-13 130442](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/7f7f0737-72cf-442b-a87d-35e09ef83894)
+![Screenshot 2023-08-13 124112](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/9bebbeef-bb97-4640-b321-2fc7f9cac4ff)
 
 ## Click on Install suggested plugins
+![Screenshot 2023-08-13 130442](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/7f7f0737-72cf-442b-a87d-35e09ef83894)
 
 ## Wait for the Jenkins to Install suggested plugins
 ![Screenshot 2023-08-13 130524](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/089d44be-0762-4251-b3cc-e1e1baec495b)
