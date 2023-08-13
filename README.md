@@ -31,13 +31,14 @@ Java (JDK)
 
 Install Java
 
-<details>
+<div class="command" id="command1">
   
 $ sudo apt update
 
 $ sudo apt install openjdk-11-jre
-</details>
-```
+
+</div>
+<button class="copy-button" data-clipboard-target="#command1">Copy</button>
 
 Verify Java is Installed
 
