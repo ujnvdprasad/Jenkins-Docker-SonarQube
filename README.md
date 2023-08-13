@@ -31,14 +31,14 @@ Java (JDK)
 
 Install Java
 
-<div class="command" id="command1">
-  
+<script>
+  new ClipboardJS('.copy-button');
+
 $ sudo apt update
 
 $ sudo apt install openjdk-11-jre
 
-</div>
-<button class="copy-button" data-clipboard-target="#command1">Copy</button>
+</script>
 
 Verify Java is Installed
 
