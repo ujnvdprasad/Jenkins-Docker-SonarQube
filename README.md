@@ -88,12 +88,19 @@ http://<ec2-instance-public-ip>:8080/restart
 The docker agent configuration is now successful.
 
 ## Configure a Sonar Server locally
+
 $ apt install unzip -y
+
 $ adduser sonarqube
+
 $ sudo su - sonarqube
+
 $ wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+
 $ unzip *
+
 $ sudo -i
+
 $ chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
 $ chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
 $ exit
