@@ -1,23 +1,32 @@
 pipeline{
-    agent{
-        docker{
-            image 'ujnvdprasad/slave-image:v1'
-            args '--user root -v /var/lib/docker.sock:/var/lib/docker.sock'
-        }
+  agent{
+    docker{
+      image 'ujnvdprasad/slave-image:v1'
+      args '--user root -v /var/lib/docker.sock:/var/lib/docker.sock'
     }
-    stages {
-      stage('Checkout') {
-        steps {
-          sh 'echo passed'
-          git 'https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube.git'
-        }
+  }
+  stages {
+    stage('Checkout') {
+      steps {
+        sh 'echo passed'
+        git 'https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube.git'
       }
-      stage('Build and Test') {
-        steps {
-          sh 'ls -ltr'
-        // build the project and create a JAR file
+    }
+    stage('Build and Test') {
+      steps {
+        sh 'ls -ltr //build the project and create a JAR file
         sh 'cd spring-boot-app && mvn clean package'
-        }
       }
     }
+    stage('Static Code Analysis') {
+      environment {
+        SONAR_URL = "http://13.235.49.99:9000/"
+      }
+      steps {
+        withCredentials([string(credentialsId: 'SonarQube', variable: 'SONAR_AUTH_TOKEN')]) {
+          sh 'cd spring-boot-app && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
+        }
+      }
+    } 
+  }
 }
