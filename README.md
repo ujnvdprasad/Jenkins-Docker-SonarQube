@@ -19,7 +19,8 @@ Go to AWS Console
 Instances(running)
 
 Launch instances
-![Screenshot 2023-08-13 123600](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/48ab52d4-f7cd-46f6-ac4f-61702c294609)
+![Screenshot 2023-08-13 123545](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/3e77834e-f38e-4515-99a2-392e4d10bd40)
+
 
 ## Install Jenkins.
 
@@ -63,7 +64,8 @@ In the bottom tabs -> Click on Security
 Security groups
 
 Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed All traffic).
-![Screenshot 2023-08-13 124007](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/73bf7c24-eb5d-403e-987b-00158d334514)
+![Screenshot 2023-08-13 124007](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/f4a7c261-df38-4e58-86e5-d9285116be03)
+
 
 # Login to Jenkins using the below URL:
 http://:8080 [You can get the ec2-instance-public-ip-address from your AWS EC2 console page]
@@ -71,15 +73,15 @@ http://:8080 [You can get the ec2-instance-public-ip-address from your AWS EC2 c
 Note: If you are not interested in allowing All Traffic to your EC2 instance 1. Delete the inbound traffic rule for your instance 2. Edit the inbound traffic rule to only allow custom TCP port 8080
 
 After you login to Jenkins, - Run the command to copy the Jenkins Admin Password - sudo cat /var/lib/jenkins/secrets/initialAdminPassword - Enter the Administrator password
-![Screenshot 2023-08-13 124112](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/3b5b54b5-53f4-4d78-ba69-6a77697f835e)
+![Screenshot 2023-08-13 130442](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/7f7f0737-72cf-442b-a87d-35e09ef83894)
 
 ## Click on Install suggested plugins
 
 ## Wait for the Jenkins to Install suggested plugins
-![Screenshot 2023-08-13 130524](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/efdb857b-24b0-4ddd-9f63-82c546a5ed5b)
+![Screenshot 2023-08-13 130524](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/089d44be-0762-4251-b3cc-e1e1baec495b)
 
 Create First Admin User or Skip the step [If you want to use this Jenkins instance for future use-cases as well, better to create admin user]
-![Screenshot 2023-08-13 124457](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/3bfe49b8-6690-4411-9059-3a9564ccd3d7)
+![Screenshot 2023-08-13 124457](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/3dbd2d5c-7173-4082-a5e0-c7dd1e0a30c1)
 
 Jenkins Installation is Successful. You can now starting using the Jenkins
 
@@ -98,8 +100,8 @@ In the Available tab, search for "SonarQube Scanner".
 Select the plugin and click the Install button.
 
 Restart Jenkins after the plugin is installed.
-![Screenshot 2023-08-13 124913](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/5bcc95d7-628f-435c-b1d8-257d6efd88ac)
-![Screenshot 2023-08-13 134615](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/9e12e2af-5277-4d09-a3f2-c9d237ce47ae)
+![Screenshot 2023-08-13 134615](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/683a6cb4-81a3-4f23-8750-77b87a527f58)
+![Uploading Screenshot 2023-08-13 124913.png…]()
 
 Wait for the Jenkins to be restarted.
 
