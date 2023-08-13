@@ -102,7 +102,8 @@ Select the plugin and click the Install button.
 
 Restart Jenkins after the plugin is installed.
 ![Screenshot 2023-08-13 134615](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/683a6cb4-81a3-4f23-8750-77b87a527f58)
-![Uploading Screenshot 2023-08-13 124913.png…]()
+
+![Screenshot 2023-08-13 124913](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/7e14749e-792a-49f4-b93f-acf14aaf05ea)
 
 Wait for the Jenkins to be restarted.
 
