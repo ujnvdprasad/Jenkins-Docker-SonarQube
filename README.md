@@ -76,7 +76,6 @@ After you login to Jenkins, - Run the command to copy the Jenkins Admin Password
 ## Click on Install suggested plugins
 ![Screenshot 2023-08-13 130442](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/b8ae0b8d-76fd-4277-98b5-c1f495681fbd)
 
-Wait for the Jenkins to Install suggested plugins
 ![Screenshot 2023-08-13 130524](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/efdb857b-24b0-4ddd-9f63-82c546a5ed5b)
 
 Create First Admin User or Skip the step [If you want to use this Jenkins instance for future use-cases as well, better to create admin user]
@@ -103,18 +102,19 @@ Wait for the Jenkins to be restarted.
 
 Run the below command to Install Docker
 
-$ sudo apt update
-
-$ sudo apt install docker.io
+```
+sudo apt update
+sudo apt install docker.io
+```
 
 ## Grant Jenkins user and Ubuntu user permission to docker deamon.
-$ sudo su - 
 
-$ usermod -aG docker jenkins
-
-$ usermod -aG docker ubuntu
-
-$ systemctl restart docker
+```
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
 
 Once you are done with the above steps, it is better to restart Jenkins.
 
@@ -124,26 +124,17 @@ The docker agent configuration is now successful.
 
 ## Configure a Sonar Server locally
 
-$ apt install unzip -y
-
-$ adduser sonarqube
-
-$ sudo su - sonarqube
-
-$ wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
-
-$ unzip *
-
-$ sudo -i
-
-$ chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
-
-$ chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
-
-$ exit
-
-$ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
-
-$ ./sonar.sh start
+```
+apt install unzip -y
+adduser sonarqube
+sudo su - sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+unzip *
+sudo -i
+chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+exit
+cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+./sonar.sh start
 
 Hurray !! Now you can access the SonarQube Server on http://<ip-address>:9000
