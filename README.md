@@ -76,6 +76,7 @@ After you login to Jenkins, - Run the command to copy the Jenkins Admin Password
 ## Click on Install suggested plugins
 ![Screenshot 2023-08-13 130442](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/b8ae0b8d-76fd-4277-98b5-c1f495681fbd)
 
+## Wait for the Jenkins to Install suggested plugins
 ![Screenshot 2023-08-13 130524](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/efdb857b-24b0-4ddd-9f63-82c546a5ed5b)
 
 Create First Admin User or Skip the step [If you want to use this Jenkins instance for future use-cases as well, better to create admin user]
