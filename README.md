@@ -74,7 +74,6 @@ After you login to Jenkins, - Run the command to copy the Jenkins Admin Password
 ![Screenshot 2023-08-13 124112](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/3b5b54b5-53f4-4d78-ba69-6a77697f835e)
 
 ## Click on Install suggested plugins
-![Screenshot 2023-08-13 130442](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/b8ae0b8d-76fd-4277-98b5-c1f495681fbd)
 
 ## Wait for the Jenkins to Install suggested plugins
 ![Screenshot 2023-08-13 130524](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/efdb857b-24b0-4ddd-9f63-82c546a5ed5b)
