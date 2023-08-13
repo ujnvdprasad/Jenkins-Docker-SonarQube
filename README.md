@@ -1,4 +1,4 @@
-# Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using Jenkins,SonarQube,Docker:
+# Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using Jenkins,SonarQube,Docker and minikube:
 
 # Prerequisites:
 
