@@ -83,7 +83,7 @@ Create First Admin User or Skip the step [If you want to use this Jenkins instan
 
 Jenkins Installation is Successful. You can now starting using the Jenkins
 
-# Install the Docker Pipeline plugin in Jenkins:
+# Install the Docker Pipeline plugin & SonarQube Scanner in Jenkins:
 
 Log in to Jenkins.
 
@@ -93,8 +93,13 @@ In the Available tab, search for "Docker Pipeline".
 
 Select the plugin and click the Install button.
 
+In the Available tab, search for "SonarQube Scanner".
+
+Select the plugin and click the Install button.
+
 Restart Jenkins after the plugin is installed.
 ![Screenshot 2023-08-13 124913](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/5bcc95d7-628f-435c-b1d8-257d6efd88ac)
+![Screenshot 2023-08-13 134615](https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube/assets/124246569/9e12e2af-5277-4d09-a3f2-c9d237ce47ae)
 
 Wait for the Jenkins to be restarted.
 
@@ -138,3 +143,4 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 ./sonar.sh start
 
 Hurray !! Now you can access the SonarQube Server on http://<ip-address>:9000
+
