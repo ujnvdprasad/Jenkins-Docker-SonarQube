@@ -32,7 +32,8 @@ Java (JDK)
 Install Java
 
 <script>
-  new ClipboardJS('.copy-button');
+  
+new ClipboardJS('.copy-button');
 
 $ sudo apt update
 
