@@ -9,7 +9,6 @@ pipeline{
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        echo $USER
         git 'https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube.git'
       }
     }
