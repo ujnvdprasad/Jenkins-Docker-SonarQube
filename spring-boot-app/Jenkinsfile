@@ -44,5 +44,19 @@ pipeline{
         }
       }
     }
+    stage('Check Docker') {
+      steps {
+        script {
+          def dockerStatus = sh(script: 'docker info > /dev/null 2>&1; echo $?', returnStatus: true).trim()
+          if (dockerStatus == '0') {
+            echo "Docker daemon is running"
+            // Your further pipeline steps related to Docker
+          } 
+          else {
+            error "Docker daemon is not running"
+          }
+        }
+      }
+    }
   }
 }
