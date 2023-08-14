@@ -13,6 +13,14 @@ pipeline{
         git 'https://github.com/ujnvdprasad/Jenkins-Docker-SonarQube.git'
       }
     }
+    stage('Print User') {
+      steps {
+        script {
+          def currentUser = currentBuild.rawBuild.getCause(hudson.model.Cause.UserIdCause).userId
+          echo "User executing the pipeline: ${currentUser}"
+        }
+      }
+    }
     stage('Build and Test') {
       steps {
         sh 'ls -ltr' //build the project and create a JAR file
