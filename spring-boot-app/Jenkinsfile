@@ -28,20 +28,6 @@ pipeline{
         }
       }
     }
-    stage('Check Docker') {
-      steps {
-        script {
-          def dockerStatus = sh(script: 'docker info > /dev/null 2>&1; echo $?', returnStatus: true)
-          if (dockerStatus == '0') {
-            echo "Docker daemon is running"
-            // Your further pipeline steps related to Docker
-          } 
-          else {
-            error "Docker daemon is not running"
-          }
-        }
-      }
-    }
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "ujnvdprasad/ultimate-cicd-myself:${BUILD_NUMBER}"
