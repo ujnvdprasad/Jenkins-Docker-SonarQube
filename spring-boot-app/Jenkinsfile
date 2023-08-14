@@ -1,7 +1,7 @@
 pipeline{
   agent{
     docker{
-      image 'ujnvdprasad/slave-image:v10'
+      image 'ujnvdprasad/slave-image:v12'
       args '--user root -v /var/lib/docker.sock:/var/lib/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
